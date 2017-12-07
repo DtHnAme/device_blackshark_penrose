@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
