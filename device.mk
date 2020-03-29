@@ -85,6 +85,11 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayPenrose \
     TelephonyOverlayPenrose
 
+# Overlays - override vendor ones
+PRODUCT_PACKAGES += \
+    WifiResTarget \
+    FrameworksResTarget \
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
