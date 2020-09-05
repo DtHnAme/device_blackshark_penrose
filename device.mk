@@ -107,6 +107,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # RRO Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayPenrose \
