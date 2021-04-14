@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=thyme
+DEVICE=penrose
 VENDOR=blackshark
 
 # Load extract_utils and do some sanity checks
