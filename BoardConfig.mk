@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from the proprietary version
+-include vendor/blackshark/penrose/BoardConfigVendor.mk
+
 DEVICE_PATH := device/blackshark/penrose
 PENROSE_PREBUILT := device/blackshark/penrose-prebuilt
 
