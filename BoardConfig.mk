@@ -131,6 +131,9 @@ SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
