@@ -49,6 +49,10 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# Overlays
+PRODUCT_PACKAGES += \
+    WifiResOverlayPenrose
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
