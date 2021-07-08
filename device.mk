@@ -52,7 +52,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayPenrose \
-    WifiResOverlayPenrose
+    WifiResOverlayPenrose \
+    DialerOverlayPenrose
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
