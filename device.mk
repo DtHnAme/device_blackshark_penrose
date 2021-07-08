@@ -89,7 +89,8 @@ PRODUCT_PACKAGES += \
     DialerOverlayPenrose \
     SettingsOverlayPenrose \
     CarrierConfigOverlayPenrose \
-    TelephonyOverlayPenrose
+    TelephonyOverlayPenrose \
+    SystemUIOverlayPenrose
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
