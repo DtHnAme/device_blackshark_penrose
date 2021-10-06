@@ -27,7 +27,10 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 
-public class ShoulderKeyActivity extends PreferenceActivity
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public class ShoulderKeyActivity extends CollapsingToolbarBaseActivity  
     implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
     private static final String TAG_SHOULDER_KEY = "shoulder_key";
@@ -55,7 +58,7 @@ public class ShoulderKeyActivity extends PreferenceActivity
             fragment = new ShoulderKeyFragment(); 
         }
 
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
+        getFragmentManager().beginTransaction().replace(R.id.content_frame,
                 fragment, TAG_SHOULDER_KEY).commit();
     }
     

@@ -84,7 +84,6 @@ public class ShoulderKeyAppFragment extends PreferenceFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         setHasOptionsMenu(true);
         
         mService = ShoulderKeyService.getInstance();

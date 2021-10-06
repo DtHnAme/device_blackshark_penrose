@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources>
+    <string name="ambient_enable">启用环境显示</string>
 
     <!-- DTS Audio settings -->
     <string name="dts_audio_title">DTS 音效</string>

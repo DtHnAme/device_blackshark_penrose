@@ -47,7 +47,6 @@ public class ShoulderKeyFragment extends PreferenceFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.shoulder_key_settings);
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mSoundEffectPref = findPreference(SOUND_EFFECT_KEY);
         mPreventAccidentalPref = findPreference(PREVENT_ACCIDENTAL_KEY);

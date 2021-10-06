@@ -52,7 +52,7 @@
         <activity
             android:name=".dtsaudio.DtsAudioActivity"
             android:label="@string/dts_audio_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -76,13 +76,13 @@
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
         </activity>
 
         <activity
             android:name=".display.DcDimmingSettingsActivity"
             android:label="@string/dc_dimming_enable_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -98,8 +98,7 @@
         <activity
             android:name=".shoulderkey.ShoulderKeyActivity"
             android:label="@string/shoulder_key_title"
-            android:icon="@drawable/ic_shoulderkey"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -108,6 +107,9 @@
             <meta-data
                 android:name="com.android.settings.order"
                 android:value="-252" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_shoulderkey" />
 
             <meta-data
                 android:name="com.android.settings.category"

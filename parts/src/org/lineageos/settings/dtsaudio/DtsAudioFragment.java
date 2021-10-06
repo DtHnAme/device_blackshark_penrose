@@ -17,7 +17,6 @@
 package org.lineageos.settings.dtsaudio;
 
 import android.content.Context;
-import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -49,7 +48,6 @@ public class DtsAudioFragment extends PreferenceFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.dtsaudio_settings);
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mDtsAudioEnablePref = (SwitchPreference) findPreference(DTS_AUDIO_ENABLE_KEY);
         mDtsGeqEnablePref = (SwitchPreference) findPreference(DTS_GEQ_ENABLE_KEY);
@@ -100,15 +98,6 @@ public class DtsAudioFragment extends PreferenceFragment implements
         }
         //checkPreference();
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            getActivity().onBackPressed();
-            return true;
-        }
-        return false;
     }
 
 }

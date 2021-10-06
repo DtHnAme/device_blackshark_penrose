@@ -18,6 +18,9 @@
     <!-- DO NOT TRANSLATE Empty summary for dynamic preferences -->
     <string name="summary_empty" translatable="false"></string>
 
+    <!-- Ambient settings -->
+    <string name="ambient_enable">Enable ambient display</string>
+
     <!-- DTS Audio settings -->
     <string name="dts_audio_title">DTS Audio</string>
     <string name="bass_boost_title">Bass Boost</string>

@@ -29,7 +29,7 @@
         android:scaleType="centerInside" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:id="@+id/text_layout"
@@ -44,7 +44,7 @@
             android:ellipsize="marquee"
             android:singleLine="true"
             android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.Medium"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textColor="?android:attr/textColorPrimary" />
 
         <TextView
@@ -59,13 +59,13 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal|end"
+        android:layout_gravity="center_vertical|end"
         android:orientation="vertical">
 
         <Switch
             android:id="@+id/app_switch"
-            android:layout_width="@android:dimen/app_icon_size"
-            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scaleType="centerInside" />
 
     </LinearLayout>
