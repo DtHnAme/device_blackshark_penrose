@@ -14,3 +14,6 @@ service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
     group system
     shutdown critical
     disabled
+
+on post-fs
+    mount none /system/bin/hw/android.hardware.power-service /vendor/bin/hw/android.hardware.power-service bind
