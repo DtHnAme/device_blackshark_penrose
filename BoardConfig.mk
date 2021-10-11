@@ -11,6 +11,7 @@ DEVICE_PATH := device/blackshark/penrose
 PENROSE_PREBUILT := device/blackshark/penrose-prebuilt
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 AB_OTA_UPDATER := true
