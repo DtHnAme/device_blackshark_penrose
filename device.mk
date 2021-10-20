@@ -49,6 +49,10 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayPenrose \
