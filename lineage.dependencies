@@ -1,2 +1,6 @@
 [
+  {
+    "repository": "android_device_blackshark_penrose-prebuilt",
+    "target_path": "device/blackshark/penrose-prebuilt"
+  }
 ]
