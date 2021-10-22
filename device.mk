@@ -36,7 +36,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
+    init.recovery.qcom.rc \
+    init.recovery.usb.rc
 
 # fastbootd
 PRODUCT_PACKAGES += \
