@@ -115,7 +115,8 @@ PRODUCT_PACKAGES += \
     SettingsOverlayPenrose \
     CarrierConfigOverlayPenrose \
     TelephonyOverlayPenrose \
-    SystemUIOverlayPenrose
+    SystemUIOverlayPenrose \
+    SettingsProviderOverlayPenrose
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
