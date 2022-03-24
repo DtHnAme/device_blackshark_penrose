@@ -51,6 +51,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworkResOverlayPenrose \
     WifiResOverlayPenrose
 
 # Partitions
