@@ -130,6 +130,7 @@ $(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE :=
 $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+BUILD_WITHOUT_VENDOR := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
