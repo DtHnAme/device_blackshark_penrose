@@ -11,5 +11,6 @@ type persist_file, file_type;
 type pps_socket, file_type;
 
 #sysfs
+type vendor_sysfs_graphics, sysfs_type, fs_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_kgsl, sysfs_type, fs_type;
