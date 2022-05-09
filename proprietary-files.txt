@@ -5,6 +5,11 @@ system_ext/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
 system_ext/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
 
+# ADSP Modules - from V13.0.3.0.SKHEUXM
+vendor/lib/rfsa/adsp/misound_res.bin:product/vendor_overlay/30/lib/rfsa/adsp/misound_res.bin|58e0ece3c19ed43f3346510a9eb943cf0de7fe0a
+vendor/lib/rfsa/adsp/misound_res_headphone.bin:product/vendor_overlay/30/lib/rfsa/adsp/misound_res_headphone.bin|32133fcbb9464169dd3d58f045e161b54f6afa9d
+vendor/lib/rfsa/adsp/misound_res_spk.bin:product/vendor_overlay/30/lib/rfsa/adsp/misound_res_spk.bin|be3e9c6dd2632ad529dd4f4e9a5df5d955ff11c1
+
 # Alipay / WeChat Payment
 -app/IFAAService/IFAAService.apk
 -app/SoterService/SoterService.apk
