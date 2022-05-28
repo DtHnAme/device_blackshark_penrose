@@ -6,3 +6,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0
 endif
+
+# Radio
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.telephony.default_network=33,33 
