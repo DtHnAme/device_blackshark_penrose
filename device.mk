@@ -75,7 +75,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
     init.recovery.qcom.sh \
-    init.penrose.rc
+    init.penrose.rc \
+    fstab.qcom
 
 # fastbootd
 PRODUCT_PACKAGES += \
