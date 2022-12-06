@@ -28,7 +28,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+import com.android.settingslib.widget.R;
 
 public class ShoulderKeyActivity extends CollapsingToolbarBaseActivity  
     implements PreferenceFragment.OnPreferenceStartFragmentCallback {
