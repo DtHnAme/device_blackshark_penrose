@@ -597,7 +597,11 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-        M -376 58 A 31 31 0 0 1 -438 58 A 31 31 0 0 1 -376 58 Z M -438,0 L -391,0 Z M -540,0 L -540,90 Z
+        M 514,52
+        a 20,20 0 1 0 52,0 
+        a 20,20 0 1 0 -52,0
+        Z
+        @left
     </string>
 
     <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
@@ -607,7 +611,12 @@
          config_mainBuiltInDisplayCutout
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        M -903,0 H -1080 V 90 H -903 V 0 Z@right
+        M 493.5,0
+        h 95
+        v 95
+        h -95
+        Z
+        @left
     </string>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
