@@ -111,7 +111,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Parts
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    PenroseParts
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
