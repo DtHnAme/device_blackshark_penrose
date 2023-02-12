@@ -512,6 +512,9 @@
          this value to 0 so it has no effect. -->
     <integer name="config_defaultRefreshRate">0</integer>
 
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">600</integer>
 
