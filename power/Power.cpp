@@ -31,8 +31,9 @@
 
 // defines from drivers/input/touchscreen/xiaomi/xiaomi_touch.h
 #define SET_CUR_VALUE 0
-#define Touch_Doubletap_Mode 14
+#define Touch_Doubletap_Mode 112
 
+#define TOUCH_ID 0
 #define TOUCH_DEV_PATH "/dev/xiaomi-touch"
 
 #define TOUCH_MAGIC 0x5400
@@ -69,7 +70,7 @@ void setInteractive(bool interactive) {
 
 void setTapToWake(bool enabled) {
     int fd = open(TOUCH_DEV_PATH, O_RDWR);
-    int arg[2] = {Touch_Doubletap_Mode, enabled ? 1 : 0};
+    int arg[3] = {TOUCH_ID, Touch_Doubletap_Mode, enabled ? 1 : 0};
     ioctl(fd, TOUCH_IOC_SETMODE, &arg);
 }
 
@@ -111,6 +112,7 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
     LOG(INFO) << "Power isModeSupported: " << static_cast<int32_t>(type);
 
     switch(type){
+        case Mode::DOUBLE_TAP_TO_WAKE:
         case Mode::INTERACTIVE:
         case Mode::SUSTAINED_PERFORMANCE:
         case Mode::FIXED_PERFORMANCE:
