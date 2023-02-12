@@ -1,17 +1,3 @@
-# ADSP Modules
-system_ext/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
-system_ext/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
-system_ext/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
-system_ext/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
-system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
-
-# ADSP Modules - from venus V13.0.6.0.SKBCNXM
-vendor/lib/rfsa/adsp/misound_res_spk.bin:product/vendor_overlay/30/lib/rfsa/adsp/misound_res_spk.bin|4a7e08dd2ad392a211ed77c06f9098a84ebb1dad
-
-# Alipay / WeChat Payment
--app/IFAAService/IFAAService.apk
--app/SoterService/SoterService.apk
-
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
@@ -120,14 +106,5 @@ system_ext/lib64/vendor.display.color@1.3.so
 -system_ext/app/atfwd/atfwd.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
-system_ext/etc/permissions/telephonyservice.xml
 system_ext/framework/qcrilhook.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-
-# SoundFX - from lemonade qssi-user-11-RKQ1.201105.002-2109102009-release-keys
-vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib/soundfx/libvolumelistener.so|b942c3aa1ffa563ec3f58d6789a0fbddae992c25
-vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib64/soundfx/libvolumelistener.so|e7240dbaeae2c32932c294ca3500865523c9276d
-
-# System
-system_ext/lib/libqdMetaData.so
-system_ext/lib64/libqdMetaData.so
