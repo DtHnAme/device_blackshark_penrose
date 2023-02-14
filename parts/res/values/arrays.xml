@@ -95,4 +95,33 @@
         <item>"0,4,2,0,-2,-2,4"</item>
         <item>"2,0,0,-2,-4,0,0"</item>
     </string-array>
+
+    <string-array name="sound_effect_entries" translatable="false">
+        <item>@string/sound_effect_empty</item>
+        <item>@string/sound_effect_random</item>
+        <item>@string/sound_effect_classic</item>
+        <item>@string/sound_effect_bullet_loaded</item>
+        <item>@string/sound_effect_electric_current</item>
+        <item>@string/sound_effect_wind</item>
+        <item>@string/sound_effect_mew</item>
+        <item>@string/sound_effect_energy_cannon</item>
+        <item>@string/sound_effect_rifle_gunfire</item>
+        <item>@string/sound_effect_mecha_transformation</item>
+        <item>@string/sound_effect_sword_unsheathed</item>
+    </string-array>
+
+    <string-array name="sound_effect_values" translatable="false">
+        <item>0</item>
+        <item>10</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
 </resources>

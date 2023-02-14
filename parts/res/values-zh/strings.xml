@@ -64,4 +64,21 @@
     <string name="dc_dimming_enable_title">DC 调光</string>
     <string name="dc_dimming_enable_summary">减少低亮度下眼睛的疲劳</string>
     <string name="dc_dimming_enable_summary_not_supported">当前内核目前不支持 DC 调光。</string>
+
+    <!-- Shoulder Key Settings-->
+    <string name="shoulder_key_title">肩键</string>
+    <string name="sound_effect_title">音效</string>
+
+    <string name="sound_effect_empty">无</string>
+    <string name="sound_effect_random">随机</string>
+    <string name="sound_effect_classic">经典</string>
+    <string name="sound_effect_bullet_loaded">子弹上膛</string>
+    <string name="sound_effect_electric_current">电流声</string>
+    <string name="sound_effect_wind">风声回响</string>
+    <string name="sound_effect_mew">猫叫声</string>
+    <string name="sound_effect_energy_cannon">能量炮</string>
+    <string name="sound_effect_rifle_gunfire">来福枪</string>
+    <string name="sound_effect_mecha_transformation">机甲变装</string>
+    <string name="sound_effect_sword_unsheathed">利剑出鞘</string>
+
 </resources>

@@ -15,6 +15,9 @@
      limitations under the License.
 -->
 <resources>
+    <!-- DO NOT TRANSLATE Empty summary for dynamic preferences -->
+    <string name="summary_empty" translatable="false"></string>
+
     <!-- Dirac settings -->
     <string name="dirac_title">Dirac sound enhancer</string>
     <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
@@ -64,4 +67,21 @@
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+
+    <!-- Shoulder Key Settings-->
+    <string name="shoulder_key_title">Shoulder Key</string>
+    <string name="sound_effect_title">Sound effect</string>
+
+    <string name="sound_effect_empty">Empty</string>
+    <string name="sound_effect_random">Random</string>
+    <string name="sound_effect_classic">Classic</string>
+    <string name="sound_effect_bullet_loaded">Bullet loaded</string>
+    <string name="sound_effect_electric_current">Electric</string>
+    <string name="sound_effect_wind">Wind echo</string>
+    <string name="sound_effect_mew">Mew</string>
+    <string name="sound_effect_energy_cannon">Energy cannon</string>
+    <string name="sound_effect_rifle_gunfire">Rifle gunfire</string>
+    <string name="sound_effect_mecha_transformation">Mecha Transformation</string>
+    <string name="sound_effect_sword_unsheathed">Sword Unsheathed</string>
+
 </resources>
