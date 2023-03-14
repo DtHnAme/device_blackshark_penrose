@@ -646,4 +646,9 @@
          <!-- ID0:Fingerprint:Strong -->
          <item>0:2:15</item>
      </string-array>
+     
+    <!-- InputFilter Class-->
+    <string name="config_deviceInputFilterLibs" translatable="false">/system_ext/priv-app/PenroseParts/PenroseParts.apk</string>
+    <string name="config_deviceInputFilterClasses" translatable="false">org.lineageos.settings.shoulderkey.ShoulderKeyInputFiltrer</string>
+
 </resources>

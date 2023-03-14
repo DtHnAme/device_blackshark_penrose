@@ -49,6 +49,19 @@
                  android:permission="XiaomiShoulderKeyService">
         </service>
 
+        <activity
+            android:name=".dtsaudio.DtsAudioActivity"
+            android:label="@string/dts_audio_title"
+            android:theme="@style/Theme.Main">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.sound" />
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/summary_empty" />
+        </activity>
+
         <service
             android:name=".display.DcDimmingTileService"
             android:icon="@drawable/ic_dc_tile"
@@ -85,6 +98,7 @@
         <activity
             android:name=".shoulderkey.ShoulderKeyActivity"
             android:label="@string/shoulder_key_title"
+            android:icon="@drawable/ic_shoulderkey"
             android:theme="@style/Theme.Main">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -102,6 +116,17 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/summary_empty" />
         </activity>
+
+        <service
+            android:name=".shoulderkey.ShoulderKeyTileService"
+            android:icon="@drawable/ic_shoulderkey"
+            android:label="@string/shoulder_key_mapping"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
 
     </application>
 </manifest>

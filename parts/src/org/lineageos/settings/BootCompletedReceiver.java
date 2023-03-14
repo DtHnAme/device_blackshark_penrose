@@ -25,6 +25,7 @@ import android.os.SystemProperties;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.dtsaudio.DtsAudioUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.shoulderkey.ShoulderKeyService;
@@ -43,6 +44,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         ShoulderKeyService.startService(context);
         DozeUtils.checkDozeService(context);
+        DtsAudioUtils.getInstance().initialize(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "0x40000" : "0x50000");

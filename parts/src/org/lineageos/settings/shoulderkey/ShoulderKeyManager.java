@@ -17,6 +17,7 @@
 package org.lineageos.settings.shoulderkey;
 
 import static org.lineageos.settings.shoulderkey.ShoulderKeyFragment.SOUND_EFFECT_KEY;
+import static org.lineageos.settings.shoulderkey.ShoulderKeyFragment.PREVENT_ACCIDENTAL_KEY;
 
 import android.hardware.input.InputManager;
 import android.content.Context;
@@ -26,6 +27,7 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.SoundUtils;
+import org.lineageos.settings.utils.NotificationUtils;
 
 public final class ShoulderKeyManager implements InputManager.OnSmartSwitchChangedListener {
     private static final int LEFT_KEY_CODE = 131;
@@ -59,13 +61,11 @@ public final class ShoulderKeyManager implements InputManager.OnSmartSwitchChang
         }
         mContext = context;
         mInputManager.registerOnSmartSwitchChangedListener(this, null);
-        //mInputManager.registerOnKeyEventListener(this, null);
     }
 
     public void unregister() {
         if (mInputManager != null) {
             mInputManager.unregisterOnSmartSwitchChangedListener(this);
-            //mInputManager.unregisterOnKeyEventListener(this);
         }
     }
 
@@ -75,13 +75,14 @@ public final class ShoulderKeyManager implements InputManager.OnSmartSwitchChang
         Log.i(TAG, "onSmartSwitchChanged: " + whenNanos + " " + smartSwitchState);
         mSoundId = getSoundId();
         if (mSoundId == 10) {
-            if (mKeyLeft != isLeft && smartSwitchState) {
+            if (smartSwitchState) {
                 mRandomSoundId = SoundUtils.randomNum(1, 10);
             }
             mSoundId = mRandomSoundId;
             mKeyLeft = isLeft;
         }
         SoundUtils.play(mSoundId, isLeft, smartSwitchState);
+        NotificationUtils.getInstance().showNotification(isLeft, smartSwitchState);
     }
 
     private int getSoundId() {

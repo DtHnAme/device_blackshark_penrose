@@ -18,6 +18,19 @@
     <!-- DO NOT TRANSLATE Empty summary for dynamic preferences -->
     <string name="summary_empty" translatable="false"></string>
 
+    <!-- DTS Audio settings -->
+    <string name="dts_audio_title">DTS Audio</string>
+    <string name="bass_boost_title">Bass Boost</string>
+    <string name="dts_geq_title">Equalizer</string>
+    <string name="dts_music_style">Music Style</string>
+    <string name="dts_sound_mode">DTS Sound Effect</string>
+    <string name="dts_music">Music</string>
+    <string name="dts_video">Video</string>
+    <string name="dts_stereo_surround">SuperSurround</string>
+    <string name="dts_the_game_music">GameMusic</string>
+    <string name="dts_human_enhancement">SuperVoices</string>
+    <string name="dts_footstep_intensification">SuperFootstep</string>
+
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
@@ -26,6 +39,22 @@
     <!-- Shoulder Key Settings-->
     <string name="shoulder_key_title">Shoulder Key</string>
     <string name="sound_effect_title">Sound effect</string>
+    <string name="shoulder_key_mapping">Key Mapping</string>
+    <string name="shoulder_key_app_title">App Settings</string>
+    <string name="shoulder_key_app_null">No Data</string>
+    <string name="shoulder_key_app_landscape">Landscape</string>
+    <string name="shoulder_key_app_portrait">Portrait</string>
+    <string name="shoulder_key_app_disable">Key Mapping is not enabled for the current app</string>
+    <string name="shoulder_key_app_reset">Reset All</string>
+    <string name="key_mapping_long_press">Long press blank space to close</string>
+    <string name="key_mapping_global_mode_title">Key Mapping Global Mode</string>
+    <string name="key_mapping_global_mode">Global Mode</string>
+
+    <string name="notification_channel_name">Master Trigger state</string>
+    <string name="notification_text">Suggest to retract in time after use to avoid falling damage</string>
+    <string name="notification_title">Master Trigger ejected</string>
+    <string name="prevent_accidental_touch_summary">When Master Trigger ejected, a notification will prompt</string>
+    <string name="prevent_accidental_touch_title">Tips against accidental touch</string>
 
     <string name="sound_effect_empty">Empty</string>
     <string name="sound_effect_random">Random</string>

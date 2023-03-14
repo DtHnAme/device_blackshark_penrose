@@ -17,17 +17,57 @@
 
 package org.lineageos.settings.shoulderkey;
 
+import android.app.Fragment;
+import android.content.ComponentName;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.content.Intent;
 
-public class ShoulderKeyActivity extends PreferenceActivity {
+import androidx.fragment.app.FragmentActivity;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
+
+public class ShoulderKeyActivity extends PreferenceActivity
+    implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
     private static final String TAG_SHOULDER_KEY = "shoulder_key";
+    public static final String PACKAGE_NAME = "org.lineageos.settings";
+    public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
+    public static final String EXTRA_SHOW_FRAGMENT_TITLE = ":settings:show_fragment_title";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Fragment fragment = null;
+        String fragmentClass = getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT);
+        String titleText = getIntent().getStringExtra(EXTRA_SHOW_FRAGMENT_TITLE);
+        
+        if (fragmentClass != null) {
+            fragment = Fragment.instantiate(this, fragmentClass);
+        }
+
+        if (titleText != null) {
+            setTitle(titleText);
+        }
+        
+        if (fragment == null) {
+            fragment = new ShoulderKeyFragment(); 
+        }
+
         getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new ShoulderKeyFragment(), TAG_SHOULDER_KEY).commit();
+                fragment, TAG_SHOULDER_KEY).commit();
     }
+    
+    @Override
+    public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(PACKAGE_NAME, PACKAGE_NAME + ".shoulderkey.ShoulderKeyActivity"));
+        intent.putExtra(EXTRA_SHOW_FRAGMENT, pref.getFragment());
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_TITLE, pref.getTitle());
+
+        startActivity(intent);
+        return true;
+    }
+
 }

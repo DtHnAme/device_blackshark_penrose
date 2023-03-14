@@ -17,27 +17,33 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"> 
     <SwitchPreference
-        android:key="prevent_accidental_touch"
+        android:key="dts_audio_enable"
         android:defaultValue="true"
-        android:title="@string/prevent_accidental_touch_title"
-        android:summary="@string/prevent_accidental_touch_summary" />
-
-    <ListPreference
-        android:key="shoulder_key_sound_effect"
-        android:entries="@array/sound_effect_entries"
-        android:entryValues="@array/sound_effect_values"
-        android:defaultValue="0"
-        android:title="@string/sound_effect_title"
-        android:summary="%s" />
+        android:title="@string/dts_audio_title" />
+    <SwitchPreference
+        android:key="dts_bypass_enable"
+        android:defaultValue="true"
+        android:title="DTS ByPass" />
 
     <SwitchPreference
-        android:key="key_mapping_global_mode"
-        android:defaultValue="false"
-        android:title="@string/key_mapping_global_mode_title"/>
+        android:key="dts_geq_enable"
+        android:defaultValue="true"
+        android:title="@string/dts_geq_title" />
 
-    <Preference
-        android:key="key_mapping_app_settings"
-        android:title="@string/shoulder_key_app_title" 
-        android:fragment="org.lineageos.settings.shoulderkey.ShoulderKeyAppFragment"/>
+    <ListPreference
+        android:key="dts_music_style"
+        android:entries="@array/dtsMusicStyle"
+        android:entryValues="@array/dtsMusicValue"
+        android:defaultValue="0"
+        android:title="@string/dts_music_style"
+        android:summary="%s" />
+
+    <ListPreference
+        android:key="dts_audio_sound_mode"
+        android:entries="@array/dts_sound_mode_string"
+        android:entryValues="@array/dts_sound_mode_value"
+        android:defaultValue="0"
+        android:title="@string/dts_sound_mode"
+        android:summary="%s" />
 
 </PreferenceScreen>

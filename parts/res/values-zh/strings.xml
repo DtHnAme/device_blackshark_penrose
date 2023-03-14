@@ -16,6 +16,19 @@
 -->
 <resources>
 
+    <!-- DTS Audio settings -->
+    <string name="dts_audio_title">DTS 音效</string>
+    <string name="bass_boost_title">低频提升</string>
+    <string name="dts_geq_title">均衡器</string>
+    <string name="dts_music_style">音乐风格</string>
+    <string name="dts_sound_mode">DTS 扬声器音效</string>
+    <string name="dts_music">音乐</string>
+    <string name="dts_video">视频</string>
+    <string name="dts_stereo_surround">环绕立体声</string>
+    <string name="dts_the_game_music">游戏音乐</string>
+    <string name="dts_human_enhancement">人声增强</string>
+    <string name="dts_footstep_intensification">脚步声增强</string>
+
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC 调光</string>
     <string name="dc_dimming_enable_summary">减少低亮度下眼睛的疲劳</string>
@@ -24,6 +37,22 @@
     <!-- Shoulder Key Settings-->
     <string name="shoulder_key_title">肩键</string>
     <string name="sound_effect_title">音效</string>
+    <string name="shoulder_key_mapping">肩键映射</string>
+    <string name="shoulder_key_app_title">应用设置</string>
+    <string name="shoulder_key_app_null">无数据</string>
+    <string name="shoulder_key_app_landscape">横屏</string>
+    <string name="shoulder_key_app_portrait">竖屏</string>
+    <string name="shoulder_key_app_disable">当前app未开启映射</string>
+    <string name="shoulder_key_app_reset">重置全部</string>
+    <string name="key_mapping_long_press">长按空白处关闭</string>
+    <string name="key_mapping_global_mode_title">肩键映射全局模式</string>
+    <string name="key_mapping_global_mode">全局模式</string>
+
+    <string name="notification_channel_name">升降肩键状态</string>
+    <string name="notification_text">建议使用后及时收起，避免跌落损坏</string>
+    <string name="notification_title">升降肩键已启用</string>
+    <string name="prevent_accidental_touch_summary">当升降肩键升起时，后台常驻通知进行提示</string>
+    <string name="prevent_accidental_touch_title">防误触提示</string>
 
     <string name="sound_effect_empty">无</string>
     <string name="sound_effect_random">随机</string>

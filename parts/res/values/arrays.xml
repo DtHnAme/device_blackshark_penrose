@@ -15,6 +15,177 @@
      limitations under the License.
 -->
 <resources>
+    <array name="dtsBruceStyle">
+        <item>3</item>
+        <item>6</item>
+        <item>8</item>
+        <item>3</item>
+        <item>-2</item>
+        <item>@null</item>
+        <item>4</item>
+        <item>7</item>
+        <item>9</item>
+        <item>10</item>
+    </array>
+
+    <array name="dtsClassicalStyle">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>-6</item>
+        <item>-6</item>
+        <item>-6</item>
+        <item>-8</item>
+    </array>
+
+    <array name="dtsCountryStyle">
+        <item>5</item>
+        <item>6</item>
+        <item>2</item>
+        <item>-5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>-5</item>
+        <item>3</item>
+        <item>8</item>
+        <item>5</item>
+    </array>
+
+    <array name="dtsCustomizedStyle">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+
+    <array name="dtsDanceStyle">
+        <item>7</item>
+        <item>6</item>
+        <item>3</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>-4</item>
+        <item>-6</item>
+        <item>-6</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+
+    <array name="dtsElectronicStyle">
+        <item>6</item>
+        <item>5</item>
+        <item>@null</item>
+        <item>-5</item>
+        <item>-4</item>
+        <item>@null</item>
+        <item>6</item>
+        <item>8</item>
+        <item>8</item>
+        <item>7</item>
+    </array>
+
+    <array name="dtsFashionStyle">
+        <item>4</item>
+        <item>2</item>
+        <item>@null</item>
+        <item>-3</item>
+        <item>-6</item>
+        <item>-6</item>
+        <item>-3</item>
+        <item>@null</item>
+        <item>1</item>
+        <item>3</item>
+    </array>
+
+    <array name="dtsJazzStyle">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>@null</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
+
+    <string-array name="dtsMusicStyle">
+        <item>No Style</item>
+        <item>Rock</item>
+        <item>Jazz</item>
+        <item>Fashion</item>
+        <item>Classical</item>
+        <item>Bruce</item>
+        <item>Electronic Music</item>
+        <item>Country</item>
+        <item>Dance</item>
+    </string-array>
+
+    <string-array name="dtsMusicValue">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <array name="dtsNoStyle">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+
+    <array name="dtsRockStyle">
+        <item>7</item>
+        <item>4</item>
+        <item>-4</item>
+        <item>7</item>
+        <item>-2</item>
+        <item>1</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>9</item>
+    </array>
+
+    <string-array name="dts_sound_mode_string" translatable="false">
+        <item>@string/dts_music</item>
+        <item>@string/dts_video</item>
+        <item>@string/dts_stereo_surround</item>
+        <item>@string/dts_the_game_music</item>
+        <item>@string/dts_human_enhancement</item>
+        <item>@string/dts_footstep_intensification</item>
+    </string-array>
+
+    <string-array name="dts_sound_mode_value" translatable="false">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
 
     <string-array name="sound_effect_entries" translatable="false">
         <item>@string/sound_effect_empty</item>

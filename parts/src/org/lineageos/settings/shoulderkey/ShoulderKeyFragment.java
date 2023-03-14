@@ -18,6 +18,7 @@ package org.lineageos.settings.shoulderkey;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.preference.Preference;
@@ -27,13 +28,21 @@ import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.SoundUtils;
+import org.lineageos.settings.utils.NotificationUtils;
 
 public class ShoulderKeyFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
     public static final String SOUND_EFFECT_KEY = "shoulder_key_sound_effect";
+    public static final String PREVENT_ACCIDENTAL_KEY = "prevent_accidental_touch";
+    public static final String KEY_MAPPING_GLOBAL_MODE_KEY = "key_mapping_global_mode";
+    public static final String APP_SETTINGS_KEY = "key_mapping_app_settings";
 
     private Preference mSoundEffectPref;
+    private Preference mPreventAccidentalPref;
+    private Preference mAppSettingsPref;
+
+    private SwitchPreference mKeyMappingGlobalModePref;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -41,15 +50,31 @@ public class ShoulderKeyFragment extends PreferenceFragment implements
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mSoundEffectPref = findPreference(SOUND_EFFECT_KEY);
+        mPreventAccidentalPref = findPreference(PREVENT_ACCIDENTAL_KEY);
+        mKeyMappingGlobalModePref = findPreference(KEY_MAPPING_GLOBAL_MODE_KEY);
+        mAppSettingsPref = findPreference(APP_SETTINGS_KEY);
 
         mSoundEffectPref.setOnPreferenceChangeListener(this);
+        mPreventAccidentalPref.setOnPreferenceChangeListener(this);
+        mKeyMappingGlobalModePref.setOnPreferenceChangeListener(this);
+        mKeyMappingGlobalModePref.setChecked(ShoulderKeyService.getInstance().getKeyMappingGlobalMode());
+        mAppSettingsPref.setEnabled(!mKeyMappingGlobalModePref.isChecked());
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Log.i(ShoulderKeyFragment.class.getSimpleName(), "onPreferenceChange: " + preference.getKey());
         switch (preference.getKey()) {
             case SOUND_EFFECT_KEY:
                 SoundUtils.play(Integer.parseInt(newValue.toString()));
+                break;
+            case PREVENT_ACCIDENTAL_KEY:
+                if (!(boolean) newValue)
+                    NotificationUtils.getInstance().removeNotification();
+                break;
+            case KEY_MAPPING_GLOBAL_MODE_KEY:
+                ShoulderKeyService.getInstance().setKeyMappingGlobalMode((boolean) newValue);
+                mAppSettingsPref.setEnabled(!(boolean) newValue);
                 break;
         }
         return true;
