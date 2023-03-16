@@ -2,5 +2,23 @@
   {
     "repository": "android_device_blackshark_penrose-prebuilt",
     "target_path": "device/blackshark/penrose-prebuilt"
+  },
+  {
+    "repository"   : "MiCode/Xiaomi_Kernel_OpenSource",
+    "target_path"  : "kernel/blackshark/penrose",
+    "branch"       : "alioth-r-oss",
+    "remote"       : "github"
+  },
+  { 
+    "repository"   : "DtHnAme/vendor_blackshark_penrose",
+    "target_path"  : "vendor/blackshark/penrose",
+    "branch"       : "lineage-19.1",
+    "remote"       : "github"
+  },
+  { 
+    "repository"   : "LineageOS/android_hardware_xiaomi",
+    "target_path"  : "hardware/xiaomi",
+    "branch"       : "lineage-19.1",
+    "remote"       : "github"
   }
 ]
