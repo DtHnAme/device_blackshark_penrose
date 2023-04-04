@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_penrose.mk
+    $(LOCAL_DIR)/aosp_penrose.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_penrose-eng \
-    lineage_penrose-userdebug \
-    lineage_penrose-user
+    aosp_penrose-eng \
+    aosp_penrose-userdebug \
+    aosp_penrose-user
