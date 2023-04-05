@@ -18,6 +18,7 @@ package org.lineageos.settings.shoulderkey;
 
 import static org.lineageos.settings.shoulderkey.ShoulderKeyFragment.SOUND_EFFECT_KEY;
 import static org.lineageos.settings.shoulderkey.ShoulderKeyFragment.PREVENT_ACCIDENTAL_KEY;
+import static org.lineageos.settings.shoulderkey.ShoulderKeyUtils.DEBUG;
 
 import android.hardware.input.InputManager;
 import android.content.Context;
@@ -57,7 +58,7 @@ public final class ShoulderKeyManager implements InputManager.OnSmartSwitchChang
     public void register(Context context) {
         if (mInputManager == null) {
             mInputManager = (InputManager) context.getSystemService(InputManager.class);
-            Log.i(TAG, "register InputManager");
+            if (DEBUG) Log.i(TAG, "register InputManager");
         }
         mContext = context;
         mInputManager.registerOnSmartSwitchChangedListener(this, null);
@@ -72,7 +73,7 @@ public final class ShoulderKeyManager implements InputManager.OnSmartSwitchChang
     @Override
     public void onSmartSwitchChanged(long whenNanos, boolean smartSwitchState) {
         boolean isLeft = whenNanos == 1;
-        Log.i(TAG, "onSmartSwitchChanged: " + whenNanos + " " + smartSwitchState);
+        if (DEBUG) Log.i(TAG, "onSmartSwitchChanged: " + whenNanos + " " + smartSwitchState);
         mSoundId = getSoundId();
         if (mSoundId == 10) {
             if (smartSwitchState) {

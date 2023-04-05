@@ -33,7 +33,7 @@ import java.io.File;
 public final class ShoulderKeyUtils {
     private static final String TAG = "ShoulderKeyUtils";
     private static final String GLOBAL_MODE_PACKAGE = "global.keymapping.package";
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
 
     private static Context mContext;
 

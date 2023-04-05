@@ -6,6 +6,8 @@
 
 package org.lineageos.settings.shoulderkey;
 
+import static org.lineageos.settings.shoulderkey.ShoulderKeyUtils.DEBUG;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -21,7 +23,6 @@ import java.util.List;
 
 public class ShoulderKeyDBHelper extends SQLiteOpenHelper {
     private static final String TAG = "ShoulderKeyDBHelper";
-    private static final boolean DEBUG = ShoulderKeyUtils.DEBUG;
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "shoulderKey.db";
     private static final String SYSTEM_DB_PATH = "/data/system/" + DATABASE_NAME;

@@ -62,7 +62,6 @@ public class ShoulderKeyFragment extends PreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Log.i(ShoulderKeyFragment.class.getSimpleName(), "onPreferenceChange: " + preference.getKey());
         switch (preference.getKey()) {
             case SOUND_EFFECT_KEY:
                 SoundUtils.play(Integer.parseInt(newValue.toString()));

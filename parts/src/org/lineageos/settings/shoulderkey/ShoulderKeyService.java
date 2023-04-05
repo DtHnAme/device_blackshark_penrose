@@ -17,6 +17,8 @@
 
 package org.lineageos.settings.shoulderkey;
 
+import static org.lineageos.settings.shoulderkey.ShoulderKeyUtils.DEBUG;
+
 import android.app.ActivityManager;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -53,7 +55,6 @@ import org.lineageos.settings.utils.NotificationUtils;
 
 public class ShoulderKeyService extends Service {
     private static final String TAG = "ShoulderKeyService";
-    private static final boolean DEBUG = ShoulderKeyUtils.DEBUG;
 
     public static Context mContext;
 
@@ -89,9 +90,6 @@ public class ShoulderKeyService extends Service {
     }
 
     public static ShoulderKeyService getInstance() {
-        if (mShoulderKeyService != null) {
-            Log.i(TAG, "getInstance: " + mShoulderKeyService.toString());
-        }
         return mShoulderKeyService;
     }
 
