@@ -1,3 +1,10 @@
+service vendor.power /vendor/bin/hw/android.hardware.power-service
+    class hal
+    user system
+    group system
+    disabled
+    override
+
 on zygote-start
     mkdir /data/vendor/audio/dts 0771 media audio
     setprop ro.vendor.dts.licensepath "/vendor/etc/dts/"
@@ -17,6 +24,3 @@ on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
-
-on post-fs
-    mount none /system/bin/hw/android.hardware.power-service /vendor/bin/hw/android.hardware.power-service bind

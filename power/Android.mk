@@ -5,6 +5,7 @@ LOCAL_PATH := $(call my-dir)
 # hw/<POWERS_HARDWARE_MODULE_ID>.<ro.hardware>.so
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.power-service.penrose
+LOCAL_INIT_RC := android.hardware.power-service.penrose.rc
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_RELATIVE_PATH := hw
