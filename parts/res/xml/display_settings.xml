@@ -25,4 +25,11 @@
         android:icon="@drawable/ic_dcdimming"
         android:title="@string/dc_dimming_enable_title"
         android:summary="@string/dc_dimming_enable_summary" />
+    
+    <SwitchPreference
+        android:key="hbm_enable"
+        android:defaultValue="false"
+        android:icon="@drawable/ic_hbm"
+        android:title="@string/lcd_hbm_title"
+        android:summary="@string/lcd_hbm_summary" />
 </PreferenceScreen>

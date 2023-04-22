@@ -30,26 +30,36 @@ public class DisplaySettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
     private SwitchPreference mDcDimmingPreference;
+    private SwitchPreference mHBMPreference;
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/class/drm/card0-DSI-1/disp_param";
+    private static final String HBM_ENABLE_KEY = "hbm_enable";
+    private static final String DISPLAY_PARAM_NODE = "/sys/class/drm/card0-DSI-1/disp_param";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.display_settings);
         mDcDimmingPreference = (SwitchPreference) findPreference(DC_DIMMING_ENABLE_KEY);
-        if (FileUtils.fileExists(DC_DIMMING_NODE)) {
+        mHBMPreference = (SwitchPreference) findPreference(HBM_ENABLE_KEY);
+        if (FileUtils.fileExists(DISPLAY_PARAM_NODE)) {
             mDcDimmingPreference.setEnabled(true);
+            mHBMPreference.setEnabled(true);
             mDcDimmingPreference.setOnPreferenceChangeListener(this);
+            mHBMPreference.setOnPreferenceChangeListener(this);
         } else {
-            mDcDimmingPreference.setSummary(R.string.dc_dimming_enable_summary_not_supported);
+            mDcDimmingPreference.setSummary(R.string.kernel_not_supported);
+            mHBMPreference.setSummary(R.string.kernel_not_supported);
             mDcDimmingPreference.setEnabled(false);
+            mHBMPreference.setEnabled(false);
         }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "0x40000":"0x50000");
+            FileUtils.writeLine(DISPLAY_PARAM_NODE, (Boolean) newValue ? "0x40000":"0x50000");
+        }
+        if (HBM_ENABLE_KEY.equals(preference.getKey())) {
+            FileUtils.writeLine(DISPLAY_PARAM_NODE, (Boolean) newValue ? "0x10000":"0xF0000");
         }
         return true;
     }
