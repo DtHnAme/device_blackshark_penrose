@@ -20,7 +20,7 @@ package org.lineageos.settings.display;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
-public class DcDimmingTileService extends TileService {
+public class HBMTileService extends TileService {
 
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
@@ -31,7 +31,7 @@ public class DcDimmingTileService extends TileService {
     @Override
     public void onStartListening() {
         super.onStartListening();
-        updateUI(DisplayUtils.getInstance().getDcDimmingEnabled());
+        updateUI(DisplayUtils.getInstance().getHBMEnabled());
     }
 
     @Override
@@ -42,8 +42,8 @@ public class DcDimmingTileService extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        final boolean enabled = !(DisplayUtils.getInstance().getDcDimmingEnabled());
-        DisplayUtils.getInstance().setDcDimmingEnabled(enabled);
+        final boolean enabled = !(DisplayUtils.getInstance().getHBMEnabled());
+        DisplayUtils.getInstance().setHBMEnabled(enabled);
         updateUI(enabled);
     }
 }

@@ -56,10 +56,10 @@ public class DisplaySettingsFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(DISPLAY_PARAM_NODE, (Boolean) newValue ? "0x40000":"0x50000");
+            DisplayUtils.getInstance().setDcDimmingEnabled((Boolean) newValue);
         }
         if (HBM_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(DISPLAY_PARAM_NODE, (Boolean) newValue ? "0x10000":"0xF0000");
+            DisplayUtils.getInstance().setHBMEnabled((Boolean) newValue);
         }
         return true;
     }
